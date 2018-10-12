@@ -1,1 +1,3 @@
-# shields
+# Higher Education Apps
+
+**© Joe Shields AntiMatterSoft**
