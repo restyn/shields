@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <record model="ir.ui.view" id="room_form_view">
+        <field eval="True" name="active"/>
+        <field name="arch" type="xml">
+            <form>
+                <sheet string="Rooms">
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" required="1"/>
+                        </h1>
+                    </div>
+                    <group name="studio_group_c30028_left">
+
+                        <field name="Building"/>
+                        <field name="Floor"/>
+                        <field name="Seats"/>
+                        <field name="code"/>
+                    </group>
+
+                    <group name="studio_group_c30028_right">
+                        <field name="Desc"/>
+                    </group>
+            </sheet>
+            </form>
+        </field>
+        <field eval="False" name="field_parent"/>
+        <field eval="[(6, 0, [])]" name="groups_id"/>
+        <field eval="False" name="inherit_id"/>
+        <field name="mode">primary</field>
+        <field name="model">room</field>
+        <field name="name">Default form view for Rooms</field>
+        <field name="priority">16</field>
+        <field name="type">form</field>
+    </record>
+    <record model="ir.ui.view" id="room_tree_view">
+        <field eval="True" name="active"/>
+        <field name="arch" type="xml">
+            <tree string="rooms">
+                <field name="Building" modifiers="{}"/>
+                <field name="Floor" modifiers="{}"/>
+                <field name="code" modifiers="{}"/>
+                <field name="Seats" modifiers="{}"/>
+                <field name="name" modifiers="{}"/>
+            </tree>
+        </field>
+        <field eval="False" name="field_parent"/>
+        <field eval="[(6, 0, [])]" name="groups_id"/>
+        <field eval="False" name="inherit_id"/>
+        <field name="mode">primary</field>
+        <field name="model">room</field>
+        <field name="name">Default tree view for Rooms</field>
+        <field name="priority">16</field>
+        <field name="type">tree</field>
+    </record>
+    <record model="ir.actions.act_window" id="rooms_act">
+        <field eval="True" name="auto_search"/>
+        <field eval="False" name="binding_model_id"/>
+        <field name="binding_type">action</field>
+        <field name="context">{}</field>
+        <field eval="False" name="domain"/>
+        <field eval="False" name="filter"/>
+        <field eval="[(6, 0, [])]" name="groups_id"/>
+        <field name="help"><![CDATA[<p>
+                        This is your new action ; by default, it contains a list view and a form view.
+                    </p>
+                    <p>
+                        You can start customizing these screens by clicking on the Studio icon on the
+                        top right corner (you can also customize this help message there).
+                    </p>
+                ]]></field>
+        <field name="limit">80</field>
+        <field eval="False" name="multi"/>
+        <field name="name">Rooms</field>
+        <field name="res_model">room</field>
+        <field eval="False" name="search_view_id"/>
+        <field eval="False" name="src_model"/>
+        <field name="target">current</field>
+        <field name="type">ir.actions.act_window</field>
+        <field eval="False" name="usage"/>
+        <field eval="False" name="view_id"/>
+        <field name="view_mode">tree,form</field>
+        <field name="view_type">form</field>
+    </record>
+</odoo>

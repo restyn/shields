@@ -20,6 +20,11 @@ Written by Joe Shields for 10/11/2018
         'sale',
         'contacts',
     ],
+    'data': [
+        'views/building.xml',
+        'views/room.xml',
+        'menu/menu.xml',
+    ],
     'installable': True,
     'auto_install': True,
     'application': True,

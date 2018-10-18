@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record model="ir.ui.menu" id="institution_menu">
+    <field eval="False" name="action"/>
+    <field eval="True" name="active"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field name="name">Institution</field>
+    <field eval="False" name="parent_id"/>
+    <field name="sequence">10</field>
+    <field name="web_icon">fa fa-institution,#f1c40f,#34495e</field>
+  </record>
+  <record model="ir.ui.menu" id="institution_room_menu">
+    <field ref="rooms_act" name="action"/>
+    <field eval="True" name="active"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field name="name">Rooms</field>
+    <field ref="institution_menu" name="parent_id"/>
+    <field name="sequence">10</field>
+    <field eval="False" name="web_icon"/>
+  </record>
+  <record model="ir.ui.menu" id="institution_building_menu">
+    <field ref="building_wind_act" name="action"/>
+    <field eval="True" name="active"/>
+    <field eval="[(6, 0, [])]" name="groups_id"/>
+    <field name="name">Building</field>
+    <field ref="institution_menu" name="parent_id"/>
+    <field name="sequence">10</field>
+    <field eval="False" name="web_icon"/>
+  </record>
+</odoo>
