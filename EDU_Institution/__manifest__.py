@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'EDU Institution',
-    'version': '11.0.0.1',
+    'version': '11.0.0.2',
     'category': 'Education',
     "sequence": 1,
     'summary': 'Core of Higher Education Management Apps',
